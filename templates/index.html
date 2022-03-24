@@ -26,11 +26,10 @@
                 <a href="/">{{ config.title }}</a>
             </div>
             <nav class="Header-nav">
+                <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="{{ config.extra.meetup }}" target="_blank" rel="noopener nofollow">Meetup</a>
                 <a href="{{ config.extra.twitter }}" target="_blank" rel="noopener nofollow">Twitter</a>
-                <a href="{{ config.extra.videos }}" target="_blank" rel="noopener nofollow">Videos</a>
-                <a href="{{ config.extra.podcasts }}" target="_blank" rel="noopener nofollow">Podcasts</a>
             </nav>
         </div>
         <div class="Header-border">
@@ -41,11 +40,15 @@
     {% block content %}
     <div class="Home">
         <p class="Home-about">
+            <img src="/rocketcitybitcoin_logo.png" alt="Casa Logo" style="width:50%;height:50%;border:0;">
+            <br>
+            <br>
+
             {{ config.description }}
         </p>
 
         <div class="Home-posts">
-            <h2 class="Home-posts-title">Socratic Seminars</h2>
+            <h2 class="Home-posts-title">Meetups</h2>
             {% for page in section.pages %}
             <div class="Home-posts-post">
                 <span class="Home-posts-post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
@@ -56,20 +59,20 @@
         </div>
     </div>
     {% endblock content %}
-    
+
 <script type="application/ld+json">
 {
   "@context": "http://www.schema.org",
   "@type": "LocalBusiness",
-  "name": "BitDevs LA",
-  "url": "https://bitdevsla.org/",
+  "name": "Rocket City Bitcoin",
+  "url": "https://rocketcitybitcoin.org/",
   "logo": "https://pbs.twimg.com/profile_images/1194834434135998464/q8q3forH_400x400.jpg",
   "image": "https://secure.meetupstatic.com/photos/event/8/f/8/6/600_486636742.jpeg",
   "description": "BitDevs LA is a community in the Los Angeles area for those interested in discussing and participating in the research and development of Bitcoin and related protocols.",
   "founder": [
     {
       "@type": "Person",
-      "name": "Andrew Yang"
+      "name": "Brock"
     }
   ],
   "sponsor": [
@@ -83,31 +86,27 @@
   "member": [
     {
       "@type": "Person",
-      "name": "Steve Myers"
-    },
-    {
-      "@type": "Person",
-      "name": "Andrew Bentley"
+      "name": "Justin"
     }
   ],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Los Angeles",
-    "addressRegion": "Calfornia",
+    "addressLocality": "Huntsville",
+    "addressRegion": "Alabama",
     "addressCountry": "United States of America"
   },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Organizer",
-    "email": "contact@bitdevsla.org"
+    "email": "contact@rocketcitybitcoin.org"
   },
   "sameAs": [
-    "https://twitter.com/SoCalLightning",
-    "https://www.meetup.com/SoCal-Lightning/"
+    "https://twitter.com/HuntsvilleBTC",
+    "https://www.meetup.com/HuntsvilleBitcoin/"
   ]
 }
 </script>
-    
+
     <footer class="Footer">
         <div class="Footer-border">
             ==============================================================================================================================================================

@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://bitdevsla.org"
+base_url = "https://rocketcitybitcoin.org"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,14 +14,14 @@ build_search_index = false
 generate_feed = true
 feed_filename = "rss.xml"
 
-title = "BitDevs LA"
-description = "BitDevs LA is a community in the Los Angeles area for those interested in discussing and participating in the research and development of Bitcoin and related protocols."
+title = "Rocket City Bitcoin"
+description = "Talking bitcoin and increasing adoption within Huntsville and the greater Tennessee Valley."
 
 [extra]
 # Put all your custom variables here
 
-github = "https://github.com/bitdevsla/bitdevsla.org"
-meetup = "https://www.meetup.com/BitDevsLA"
-twitter = "https://twitter.com/BitDevsLA"
-videos = "https://www.youtube.com/channel/UC9uHaNjRI6ink803JYkx29Q/videos"
-podcasts = "https://anchor.fm/bitdevsla"
+github = "https://github.com/rocketcitybitcoin/rocketcitybitcoin.org"
+meetup = "https://www.meetup.com/HuntsvilleBitcoin"
+twitter = "https://twitter.com/HuntsvilleBTC"
+#videos = "https://www.youtube.com/channel/UC9uHaNjRI6ink803JYkx29Q/videos"
+#podcasts = "https://anchor.fm/bitdevsla"
