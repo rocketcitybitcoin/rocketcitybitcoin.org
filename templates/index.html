@@ -1,129 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends "juice/templates/index.html" %}
+{% block hero %}
+<div>
+    <img src="logo.png"/>
+</div>
+{% endblock hero %}
 
-<head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <title>
-        {% block title %}{{ config.title }}{% endblock title %}
-    </title>
-
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="Site">
-
-    <header class="Header">
-        <div class="Header-inner">
-            <div class="Header-logo">
-                <a href="/">{{ config.title }}</a>
-            </div>
-            <nav class="Header-nav">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="{{ config.extra.meetup }}" target="_blank" rel="noopener nofollow">Meetup</a>
-                <a href="{{ config.extra.twitter }}" target="_blank" rel="noopener nofollow">Twitter</a>
-            </nav>
-        </div>
-        <div class="Header-border">
-            ==============================================================================================================================================================
-        </div>
-    </header>
-
-    {% block content %}
-    <div class="Home">
-        <p class="Home-about">
-            <img src="/rocketcitybitcoin_logo.png" alt="Casa Logo" style="width:50%;height:50%;border:0;">
-            <br>
-            <br>
-
-            {{ config.description }}
-        </p>
-
-        <div class="Home-posts">
-            <h2 class="Home-posts-title">Meetups</h2>
-            {% for page in section.pages %}
-            <div class="Home-posts-post">
-                <span class="Home-posts-post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                <span class="Home-posts-post-arrow">&raquo;</span>
-                <a class="Home-posts-post-title" href="{{ page.permalink }}">{{ page.title }}</a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    {% endblock content %}
-
-<script type="application/ld+json">
-{
-  "@context": "http://www.schema.org",
-  "@type": "LocalBusiness",
-  "name": "Rocket City Bitcoin",
-  "url": "https://rocketcitybitcoin.org/",
-  "logo": "https://pbs.twimg.com/profile_images/1194834434135998464/q8q3forH_400x400.jpg",
-  "image": "https://secure.meetupstatic.com/photos/event/8/f/8/6/600_486636742.jpeg",
-  "description": "BitDevs LA is a community in the Los Angeles area for those interested in discussing and participating in the research and development of Bitcoin and related protocols.",
-  "founder": [
-    {
-      "@type": "Person",
-      "name": "Brock"
-    }
-  ],
-  "sponsor": [
-    {
-      "@type": "Corporation",
-      "name": "River Financial",
-      "url": "https://river.com/",
-      "sameAs": "https://twitter.com/riverfinancial"
-    }
-  ],
-  "member": [
-    {
-      "@type": "Person",
-      "name": "Justin"
-    }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Huntsville",
-    "addressRegion": "Alabama",
-    "addressCountry": "United States of America"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Organizer",
-    "email": "contact@rocketcitybitcoin.org"
-  },
-  "sameAs": [
-    "https://twitter.com/HuntsvilleBTC",
-    "https://www.meetup.com/HuntsvilleBitcoin/"
-  ]
-}
-</script>
-
-    <footer class="Footer">
-        <div class="Footer-border">
-            ==============================================================================================================================================================
-        </div>
-        <div class="Footer-inner">
-            <div class="Footer-source">
-                <a href="{{ config.extra.github }}" target="_blank"
-                   rel="noopener nofollow">Source available on Github</a>
-            </div>
-            <div class="Footer-rss">
-                <a href="/rss.xml">RSS Feed</a>
-            </div>
-        </div>
-    </footer>
-
-    <div>
-
-</body>
-
-</html>
+{% block footer %}
+<footer>
+    <small class="subtext">
+        <a href="https://rocketcitybitcoin.org">rocketcitybitcoin.org</a> © 2022
+    </small>
+</footer>
+{% endblock footer %}
