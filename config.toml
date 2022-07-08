@@ -4,24 +4,22 @@ base_url = "https://rocketcitybitcoin.org"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "juice"
+
+[markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
-
-generate_feed = true
-feed_filename = "rss.xml"
-
-title = "Rocket City Bitcoin"
-description = "Talking bitcoin and increasing adoption within Huntsville and the greater Tennessee Valley."
+highlight_code = false
 
 [extra]
 # Put all your custom variables here
-
-github = "https://github.com/rocketcitybitcoin/rocketcitybitcoin.org"
-meetup = "https://www.meetup.com/HuntsvilleBitcoin"
-twitter = "https://twitter.com/HuntsvilleBTC"
-#videos = "https://www.youtube.com/channel/UC9uHaNjRI6ink803JYkx29Q/videos"
-#podcasts = "https://anchor.fm/bitdevsla"
+juice_logo_name = "Rocket City Bitcoin"
+juice_logo_path = "rocket.png"
+juice_extra_menu = [
+    { title = "Meetup", link = "https://www.meetup.com/huntsvillebitcoin/"},
+    { title = "Github", link = "https://github.com/rocketcitybitcoin"}
+]
+repository_url = "https://github.com/rocketcitybitcoin"
